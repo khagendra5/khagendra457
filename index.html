@@ -1,154 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khagendra</title>
-    
-  </head>
-<style>
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khagendra</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Body styling */
-body {
-  background: linear-gradient(to top right, #ffe6e6, #ffe0f0);
-  min-height: 100vh;
-  font-family: 'Georgia', serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 30px 15px;
-}
+    html {
+      font-size: 16px;
+    }
 
-/* Header */
-h1 {
-  font-size: 3rem;
-  color: #ff3366;
-  text-align: center;
-  margin-bottom: 20px;
-  animation: fadeIn 2s ease-in-out;
-}
+    body {
+      background: linear-gradient(to top right, #ffe6e6, #ffe0f0);
+      min-height: 100vh;
+      font-family: 'Georgia', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2rem 1rem;
+    }
 
-/* Wrapper */
-.wrap {
-  width: 100%;
-  max-width: 850px;
-  background: #fff5f8;
-  border-radius: 15px;
-  padding: 40px 30px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  animation: slideIn 1.5s ease;
-}
+    h1 {
+      font-size: 2.5rem;
+      color: #ff3366;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-/* Postcard main box */
-.postcard {
-  background: #fff;
-  border: 2px dashed #ffccd5;
-  padding: 30px;
-  border-radius: 10px;
-  max-height: 70vh;
-  overflow-y: auto;
-  position: relative;
-}
+    .wrap {
+      width: 100%;
+      max-width: 850px;
+      background: #fff5f8;
+      border-radius: 15px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1.5s ease;
+    }
 
-/* Scrollbar style */
-.postcard::-webkit-scrollbar {
-  width: 8px;
-}
-.postcard::-webkit-scrollbar-thumb {
-  background: #ff99aa;
-  border-radius: 5px;
-}
+    .postcard {
+      background: #fff;
+      border: 2px dashed #ffccd5;
+      padding: 2rem;
+      border-radius: 10px;
+      max-height: 70vh;
+      overflow-y: auto;
+      position: relative;
+    }
 
-/* Text style */
-.postcard p {
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: #333;
-  white-space: pre-wrap;
-}
+    .postcard::-webkit-scrollbar {
+      width: 8px;
+    }
 
-/* Highlighted name & ending */
-.postcard p span {
-  font-weight: bold;
-  color: #e63946;
-  font-size: 1.1rem;
-}
+    .postcard::-webkit-scrollbar-thumb {
+      background: #ff99aa;
+      border-radius: 5px;
+    }
 
-.letter {
-  position: absolute;
-  top: -30px;
-  left: 20px;
-  font-size: 2rem;
-  color: #ff6699;
-  animation: bounce 1.5s infinite;
-}
+    .postcard p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
 
-/* Signature */
-.ullu {
-  display: block;
-  margin-top: 30px;
-  font-style: italic;
-  color: #555;
-}
+    .postcard p span {
+      font-weight: bold;
+      color: #e63946;
+      font-size: 1.1rem;
+    }
 
-/* Footer */
-footer {
-  margin-top: 40px;
-  color: #888;
-  font-size: 0.9rem;
-  text-align: center;
-}
+    .letter {
+      position: absolute;
+      top: -1.5rem;
+      left: 1.25rem;
+      font-size: 2rem;
+      color: #ff6699;
+      animation: bounce 1.5s infinite;
+    }
 
-/* Animations */
-@keyframes slideIn {
-  from {
-    transform: translateY(60px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+    .ullu {
+      display: block;
+      margin-top: 2rem;
+      font-style: italic;
+      color: #555;
+    }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+    footer {
+      margin-top: 2rem;
+      color: #888;
+      font-size: 0.9rem;
+      text-align: center;
+    }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
+    @keyframes slideIn {
+      from {
+        transform: translateY(60px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
-</style>
-  <body>
-    <div class="wrap">
-      <h1>💖</h1>
-      <div class="postcard1"></div>
-      <div class="postcard">
-        <div class="letter"></div>
-        <p>
-          <span>Hello,</span>
-          <br />
-          Good morning, Sanchai xau hola Timi yak dam good girl xau also a understanding ..Timi parti jimaybari xah yo nih malai thaxa bcz i am  overthinker yo thaxina mailya vanyako kura ko matalb k timi lya bujxau tyo tw malai thavayana mailya 
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    /* MEDIA QUERIES FOR SMALL DEVICES */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .wrap {
+        padding: 1.5rem 1rem;
+      }
+
+      .postcard {
+        padding: 1.5rem;
+      }
+
+      .postcard p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .letter {
+        font-size: 1.5rem;
+        top: -1.2rem;
+        left: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      .postcard {
+        padding: 1rem;
+      }
+
+      .postcard p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>💖</h1>
+    <div class="postcard1"></div>
+    <div class="postcard">
+      <div class="letter">✉️</div>
+      <p>
+        <span>Hello,</span><br />
+        Good morning, Sanchai xau hola Timi yak dam good girl xau also a understanding ..Timi parti jimaybari xah yo nih malai thaxa bcz i am  overthinker yo thaxina mailya vanyako kura ko matalb k timi lya bujxau tyo tw malai thavayana mailya 
 timi ma dekhyako kura haru lai bujyarw yo kura vanna lako .Tmro nih afno sapana hola yo garnay yesto garnay haina Timi pani yauta kasai ko ghr ko xori ho mummy baba lya dukha garyarw padhhaunu vako hola  rw timi lya yo kura bujyako nih hauli .. manxay ko boli lya matra haina kailya kahi manxay chup basda nih uslya dherai kura bujyako hunxa .. Ajha ko samya ramro hola naramro hola tyo tw afai lya banaudai jani ho kasto hunxa vanayrw 
 Aba yo tw malai tha xina timi lai k mann parxa kasto mann parxa .. Mailya  yauta kti ma usko habbit , bolnay tarika rw family parti ko respect herxu so i found that on u ..
 Moh sucessfull xina .. I am in struggle phase i just need that girl who can support me aajha po khi nahola voli tw hunxa nih vanyarw hausala dinu nih mayro agi both thulo kura ho mailya aafno 17-19yrs yauta banda room ma bitako xu .. i know depression ,anxiexty,overthnink k lai vanxa .. Moh kunai dhani bau ko xora nih haina middle class family with different mind set malai tyo aru jasto sucess  vayarw hazar lai choose garnu xina jo aafno sturggle ma hunxa tei nai ho afno life ko part nih hope u will understand.
@@ -167,15 +201,16 @@ My mother choose u i donot know why yadi mayro mummy lya choose garyako vayatw t
 
 Mailya vanyako kura lai timi lya bujyau ya bujinau tyo tw tahxina mailya khi galat vanya vanya tasko lagi sorry mailya yavanyako kura khi pani share nagara hai hope u understand 
 
-
-         
-         
-        </div>
-      </div>
+        ...
+        <br/><br/>
+        Hope u understand.
+      </p>
     </div>
+  </div>
 
-    <footer>
-      <p>crafted by @khagendra.</p>
-    </footer>
-  </body>
+  <footer>
+    <p>crafted by @khagendra.</p>
+  </footer>
+</body>
 </html>
+
